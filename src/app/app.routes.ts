@@ -5,6 +5,9 @@ import { NavbarDisplayComponent } from './4. Display Page/navbar-display.compone
 import { SignUpComponent } from './reactive/1. Sign Up/sign-up.component';
 import { SignInComponent } from './reactive/2. Sign In/sign-in.component';
 import { DashboardComponent } from './reactive/3. Dashboard/dashboard.component';
+import { BehaviorsubjectComponent } from './behaviorsubject/behaviorsubject.component';
+import { UpdatebehaviorComponent } from './updatebehavior/updatebehavior.component';
+import { ParentbehaviorComponent } from './parentbehavior/parentbehavior.component';
 // import { BehaviorsubjectComponent } from './behaviorsubject/behaviorsubject.component';
 // import { BehaviorupdateComponent } from './behaviorupdate/behaviorupdate.component';
 // import { UpdatebehaviorComponent } from './updatebehavior/updatebehavior.component';
@@ -33,9 +36,9 @@ export const routes: Routes = [
             { path: 'dashboard/:index', component: DashboardComponent },
         ]
     },
-    // { path: 'behavior', component: BehaviorsubjectComponent },
-    // // { path: 'updatebehavior', component: UpdatebehaviorComponent },
-    // { path: 'parentbehavior', component: ParentbehaviorComponent },
+    { path: 'behavior', component: BehaviorsubjectComponent },
+    { path: 'parentbehavior', component: ParentbehaviorComponent },
+    { path: 'updatebehavior', component: UpdatebehaviorComponent },
 
     { path: '**', redirectTo: '' }
 ];

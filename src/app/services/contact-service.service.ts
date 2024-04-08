@@ -8,9 +8,7 @@ import { BehaviorSubject } from 'rxjs';
 export class ContactServiceService {
   constructor() { }
   public behaviorSubjec = new BehaviorSubject<any>(
-    [
-      { name: 'Tolu', address: 'Oshogbo', age: 34 },
-    ]
+    { name: 'Tolu', address: 'Oshogbo', age: 34 }
   );
 
   // public arrayone = [

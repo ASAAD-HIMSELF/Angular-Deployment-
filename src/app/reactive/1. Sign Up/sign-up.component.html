@@ -3,7 +3,13 @@
         <h1 class="text-2xl font-bold mb-4 text-center">Sign Up</h1>
         <form [formGroup]="one" (ngSubmit)="submit()" class="space-y-4">
             <input class="{{tailwindStyles}}" type="text" name="firstname" formControlName="fname"
-                placeholder="First Name">
+                placeholder="First Name" [class.is-valid]="one.get('fname')?.valid && one.get('fname')?.touched"
+                [class.is-invalid]="one.get('fname')?.invalid && one.get('fname')?.dirty">
+            <div *ngIf="one.get('fname')?.invalid">
+                <span *ngIf="one.get('fname')?.errors?.['minlength']">First Name must be at least 6 characters
+                    long</span>
+                <span *ngIf="one.get('fname')?.errors?.['required']">First Name is required</span>
+            </div>
             <input class="{{tailwindStyles}}" type="text" name="lastname" formControlName="lname"
                 placeholder="Last Name">
             <input class="{{tailwindStyles}}" type="email" name="email" formControlName="em" placeholder="Email">
