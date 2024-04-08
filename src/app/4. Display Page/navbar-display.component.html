@@ -1,0 +1,26 @@
+<p>navbar-display works!</p>
+<br><br>
+<p>{{contactobj.fullName}}</p>
+<p>{{contactobj.email}}</p>
+<p>{{contactobj.address}}</p>
+<p>{{contactobj.mobile}}</p>
+<br><br>
+
+<table class="w-full">
+    <thead>
+        <tr>
+            <th class="px-4 py-2">S/N</th>
+            <th class="px-4 py-2">Name</th>
+            <th class="px-4 py-2">Address</th>
+            <th class="px-4 py-2">Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let details of object.arrayone, let i = index" class="border-t border-gray-200">
+            <td class="px-4 py-2 border border-gray-200">{{ i + 1 }}</td>
+            <td class="px-4 py-2 border border-gray-200">{{ details.name }}</td>
+            <td class="px-4 py-2 border border-gray-200">{{ details.address }}</td>
+            <td class="px-4 py-2 border border-gray-200">{{ details.age }}</td>
+        </tr>
+    </tbody>
+</table>
