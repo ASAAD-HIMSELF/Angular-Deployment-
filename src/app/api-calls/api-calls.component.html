@@ -1,0 +1,38 @@
+<p>api-calls works!</p>
+
+<!-- <div class="flex">
+    <div class="flex-1">
+        <h2 class="text-center text-3xl">PHOTOS</h2>
+        <div class="grid grid-cols-3 gap-4">
+            <div class="bg-gray-300 shadow-sm p-4 rounded" *ngFor="let photo of photosArray">
+                <img class="w-full h-auto" [src]="photo.url" alt="Photo">
+                <p>{{photo.title}}</p>
+                <p>{{photo.thumbnailUrl}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex-1">
+        <h2 class="text-center text-3xl">USERS</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" *ngFor="let user of usersArray">
+            <div class="bg-gray-400 shadow-sm p-4 rounded" *ngFor="let user of usersArray">
+                <p class="font-semibold">{{user.name}}</p>
+                <p>{{user.email}}</p>
+                <p class="text-center">{{user.company.name}}</p>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="container mx-auto">
+    <h2 class="text-2xl font-semibold mb-4">Todos</h2>
+    <ul class="divide-y divide-gray-600">
+        <li *ngFor="let todo of todosArray" class="py-4">
+            <p class="font-semibold">{{ todo.title }}</p>
+            <p>{{ todo.description }}</p>
+            <button (click)="changeStatus(todo)" class="bg-green-500 text-white px-4 py-2 rounded-md mt-2" [ngStyle]="{ 'background-color': todo.completed ? 'green' : 'red' }">
+                {{ todo.completed ? 'Completed' : 'Incomplete' }}
+            </button>
+        </li>
+    </ul>
+</div>

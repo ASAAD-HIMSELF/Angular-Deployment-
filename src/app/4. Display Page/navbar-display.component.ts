@@ -27,6 +27,6 @@ export class NavbarDisplayComponent {
     
     this.contactobj = contactarray.find((contact: any) => contact.fullName === fullName);
 
-    // console.log(this.object.arrayone);
+    console.log(this.object.arrayone);
   }
 }

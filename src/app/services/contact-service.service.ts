@@ -8,14 +8,18 @@ import { BehaviorSubject } from 'rxjs';
 export class ContactServiceService {
   constructor() { }
   public behaviorSubjec = new BehaviorSubject<any>(
-    { name: 'Tolu', address: 'Oshogbo', age: 34 }
+    { name: 'John', address: 'Unknown', age: 0 }
   );
 
-  // public arrayone = [
-  //   { name: 'Tolu', address: 'Oshogbo', age: 34 },
-  //   { name: 'Tade', address: 'Iwo', age: 45 },
-  //   { name: 'Tayo', address: 'Ogbomosho', age: 23 }
-  // ]
+  public behaviorAss = new BehaviorSubject<any>(
+    [{ fullName: '', email: '', address: '', mobile: ''}]
+  );
+
+  public arrayone = [
+    { name: 'Tolu', address: 'Oshogbo', age: 34 },
+    { name: 'Tade', address: 'Iwo', age: 45 },
+    { name: 'Tayo', address: 'Ogbomosho', age: 23 }
+  ]
 
   public info = 'My name is Ayoola'
 

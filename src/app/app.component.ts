@@ -7,6 +7,9 @@ import { NavbarDisplayComponent } from './4. Display Page/navbar-display.compone
 import { SignUpComponent } from './reactive/1. Sign Up/sign-up.component';
 import { SignInComponent } from './reactive/2. Sign In/sign-in.component';
 import { DashboardComponent } from './reactive/3. Dashboard/dashboard.component';
+
+import { BehaviorComponent } from './assignment/behavior/behavior.component';
+import { UpdatesbehaviorComponent } from './assignment/updatesbehavior/updatesbehavior.component';
 // import { ANavbarComponent } from './a-navbar/a-navbar.component';
 // import { BAuthenticationComponent } from './b-authentication/b-authentication.component';
 // import { LandingpageComponent } from './landingpage/landingpage.component';
@@ -18,7 +21,7 @@ import { DashboardComponent } from './reactive/3. Dashboard/dashboard.component'
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, LandingpageComponent,  NavbarSignupComponent, NavbarDisplayComponent, SignUpComponent, SignInComponent, DashboardComponent],
+  imports: [RouterOutlet, NavbarComponent, LandingpageComponent,  NavbarSignupComponent, NavbarDisplayComponent, SignUpComponent, SignInComponent, DashboardComponent, BehaviorComponent, UpdatesbehaviorComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

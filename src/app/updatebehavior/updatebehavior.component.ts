@@ -9,20 +9,19 @@ import { ContactServiceService } from '../services/contact-service.service';
   styleUrl: './updatebehavior.component.css'
 })
 export class UpdatebehaviorComponent {
-  constructor (public behavior: ContactServiceService){}
+  constructor(public behavior: ContactServiceService) { }
   public message = 'This is SQI College of ICT, Ogbomosho'
-  public obj: any={}
+  public obj: any = {}
 
-  ngOnit() {
-    // console.log(this.message);
+  ngOnInit() {
+    console.log(this.message);
 
     this.behavior.behaviorSubjec.subscribe(data => {
       console.log(data);
-      this.obj = data;
+      this.obj = data;this.behavior.behaviorSubjec.subscribe(data => {
+        console.log(data);
+        this.obj = data;
+      })
     })
-    // this.behavior.behaviorSubjec.subsc(data => {
-    //   console.log(data);
-    //   this.obj = data;
-    // })
   }
 }

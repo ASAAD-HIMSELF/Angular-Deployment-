@@ -21,6 +21,7 @@ export class BehaviorsubjectComponent {
 
   senditem(item:any) {
     this.behavior.behaviorSubjec.next(item)
+    console.log(item);
   }
 
   ngOnit() {
@@ -28,7 +29,6 @@ export class BehaviorsubjectComponent {
       console.log(data);
       this.behobj = data
       console.log(this.behobj);
-      
     })
   }
 }

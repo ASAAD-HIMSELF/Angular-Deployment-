@@ -8,6 +8,11 @@ import { DashboardComponent } from './reactive/3. Dashboard/dashboard.component'
 import { BehaviorsubjectComponent } from './behaviorsubject/behaviorsubject.component';
 import { UpdatebehaviorComponent } from './updatebehavior/updatebehavior.component';
 import { ParentbehaviorComponent } from './parentbehavior/parentbehavior.component';
+
+import { BehaviorComponent } from './assignment/behavior/behavior.component';
+import { UpdatesbehaviorComponent } from './assignment/updatesbehavior/updatesbehavior.component';
+import { ParentsbehaviorComponent } from './assignment/parentsbehavior/parentsbehavior.component';
+import { ApiCallsComponent } from './api-calls/api-calls.component';
 // import { BehaviorsubjectComponent } from './behaviorsubject/behaviorsubject.component';
 // import { BehaviorupdateComponent } from './behaviorupdate/behaviorupdate.component';
 // import { UpdatebehaviorComponent } from './updatebehavior/updatebehavior.component';
@@ -15,6 +20,7 @@ import { ParentbehaviorComponent } from './parentbehavior/parentbehavior.compone
 
 export const routes: Routes = [
     { path: '', component: LandingpageComponent },
+    { path: 'api', component: ApiCallsComponent },
     { path: 'signup', component: NavbarSignupComponent },
     { path: 'dashboard/:index', component: NavbarDisplayComponent },
     {
@@ -39,6 +45,13 @@ export const routes: Routes = [
     { path: 'behavior', component: BehaviorsubjectComponent },
     { path: 'parentbehavior', component: ParentbehaviorComponent },
     { path: 'updatebehavior', component: UpdatebehaviorComponent },
+
+    { path: 'assignmentbehavior', component: BehaviorComponent },
+    { path: 'assignmentparentbehavior', component: ParentsbehaviorComponent },
+    { path: 'assignmentupdate', component: UpdatesbehaviorComponent },
+    { path: 'dashboard/:index', component: NavbarDisplayComponent },
+    // { path: 'assignmentupdatebehavior', component:  },
+    
 
     { path: '**', redirectTo: '' }
 ];

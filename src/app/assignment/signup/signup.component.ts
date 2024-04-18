@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ContactServiceService } from '../services/contact-service.service';
+import { ContactServiceService } from '../../services/contact-service.service';
 
 interface ContactInterface {
   fullName: string,
@@ -12,14 +12,13 @@ interface ContactInterface {
 }
 
 @Component({
-  selector: 'app-navbar-signup',
+  selector: 'app-signup',
   standalone: true,
   imports: [FormsModule, CommonModule],
-  templateUrl: './navbar-signup.component.html',
-  styleUrl: './navbar-signup.component.css'
+  templateUrl: './signup.component.html',
+  styleUrl: './signup.component.css'
 })
-
-export class NavbarSignupComponent {
+export class SignupComponent {
   constructor(public rout: Router, public contactserv: ContactServiceService) { }
 
   public fullName = ''
@@ -65,7 +64,7 @@ export class NavbarSignupComponent {
   }
 
   view(i: any) {
-    this.rout.navigate([`dashboard/${i}`])
+    this.rout.navigate([`full_details/${i}`])
     console.log(i);
   }
 }
